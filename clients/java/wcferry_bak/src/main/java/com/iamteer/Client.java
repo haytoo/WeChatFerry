@@ -55,6 +55,7 @@ public class Client {
             } else {
                 cmd[3] = "";
             }
+
             int status = Runtime.getRuntime().exec(cmd).waitFor();
             if (status != 0) {
                 logger.error("启动 RPC 失败: {}", status);

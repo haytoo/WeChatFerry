@@ -6,6 +6,7 @@ import org.slf4j.LoggerFactory;
 public class Main {
     private static Logger logger = LoggerFactory.getLogger(Main.class);
 
+
     public static void main(String[] args) {
         // 连接远程 RPC
         // Client client = new Client("127.0.0.1", 10086);
@@ -52,7 +53,11 @@ public class Main {
         // 接收消息，并调用 printWxMsg 处理
         client.enableRecvMsg(100);
         Thread thread = new Thread(new Runnable() {
-            public void run(){while(client.getIsReceivingMsg()){client.printWxMsg(client.getMsg());}}
+            public void run() {
+                while (client.getIsReceivingMsg()) {
+                    client.printWxMsg(client.getMsg());
+                }
+            }
         });
         thread.start();
         // client.diableRecvMsg(); // 需要停止时调用

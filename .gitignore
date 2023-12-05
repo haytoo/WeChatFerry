@@ -15,7 +15,12 @@ Out/
 *.pb.c
 *.pb.cc
 *.dll
+!nng.dll
+!sdk.dll
+!spy.dll
+!spy_debug.dll
 *.exe
+!wcf.exe
 build/
 logs/
 java/wcferry/bin/
@@ -36,3 +41,7 @@ WcfOuterClass.java
 
 */http/dist/
 */http/*.egg-info/
+
+
+clients/java/wcferry/target/
+
