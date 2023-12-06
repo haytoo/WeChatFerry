@@ -36,3 +36,4 @@ WcfOuterClass.java
 
 */http/dist/
 */http/*.egg-info/
+/clients/java/wcferry/target/
